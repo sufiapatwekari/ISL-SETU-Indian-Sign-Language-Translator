@@ -56,9 +56,19 @@ export default function App() {
 
   // Backend host for FastAPI
   const [backendHost, setBackendHost] = useState(() => {
-    const saved = localStorage.getItem("islSetuBackend");
-    return saved && saved.trim() !== "" ? saved : `${window.location.hostname}:8000`;
-  });
+  const saved = localStorage.getItem("islSetuBackend");
+
+  if (
+    saved &&
+    saved.trim() !== "" &&
+    !saved.includes(window.location.hostname) &&
+    !saved.endsWith(":8000")
+  ) {
+    return saved;
+  }
+
+  return "https://isl-setu-backend.onrender.com";
+});
   const [languages, setLanguages] = useState(["English", "Hindi"]);
   const [sentences, setSentences] = useState(null);
   const [translating, setTranslating] = useState(false);
