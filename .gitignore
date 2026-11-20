@@ -26,7 +26,6 @@ backend-auth/**/keystore.p12
 
 # Data & models (raw, heavy)
 data/
-models/
 
 # OS / editor junk
 .DS_Store
