@@ -9,7 +9,7 @@ import torch
 from core.preprocess import sequence_to_features
 from core.model import SignClassifier
 
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "models", "production.pt")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "models", "production.model.zip")
 CONFIDENCE_THRESHOLD = 0.60  # Below this, return unclear=True
 
 
