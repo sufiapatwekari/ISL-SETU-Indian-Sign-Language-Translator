@@ -22,7 +22,7 @@ export default function App() {
   const [operator, setOperator] = useState(null);    // { username, fullName, role }
   const [personInfo, setPersonInfo] = useState(null); // saved Person from Spring Boot
 
-  const authBase = `https://${window.location.hostname}:8081`;
+ const authBase = "https://isl-setu-auth.onrender.com";
 
   const handleRoleSelect = (selectedRole) => {
     setRole(selectedRole);
